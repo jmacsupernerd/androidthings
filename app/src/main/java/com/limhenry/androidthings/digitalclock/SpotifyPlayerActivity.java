@@ -226,8 +226,8 @@ public class SpotifyPlayerActivity extends Activity {
     }
 
     public void getAccessToken() {
-        String refresh_token = getString(R.string.spotify_refresh_token);
-        String authorization = getString(R.string.spotify_authorization);
+        String refresh_token = "";
+        String authorization = "";
         spotifyService.getAccessToken("refresh_token", refresh_token, authorization).enqueue(new Callback<JsonObject>() {
             @Override
             public void onResponse(Call<JsonObject> call, Response<JsonObject> response) {

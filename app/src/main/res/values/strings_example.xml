@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name_test">Digital Clock</string>
-    <string name="spotify_refresh_token_test"></string>
-    <string name="spotify_authorization_test"></string>
-    <string name="owm_api_key_test"></string>
-    <string name="firebase_email_test"></string>
-    <string name="firebase_password_test"></string>
+    <!--<string name="spotify_refresh_token_test"></string>-->
+    <!--<string name="spotify_authorization_test"></string>-->
+    <string name="owm_api_key_test">bb6b205cc21bdc0dbeb1ea6b72916734</string>
+    <string name="firebase_email_test">jtmacnb@gmail.com</string>
+    <string name="firebase_password_test">Jkkm#2015</string>
 </resources>
 
 <!--Note: Remove "_test" from the name-->

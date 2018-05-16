@@ -22,8 +22,8 @@ public class OWMWeather {
 
         initWeatherIcon();
         helper = new OpenWeatherMapHelper();
-        helper.setApiKey(context.getString(R.string.owm_api_key));
-        helper.setUnits(Units.METRIC);
+        helper.setApiKey(context.getString(R.string.owm_api_key_test));
+        helper.setUnits(Units.IMPERIAL);
     }
 
     public void initWeatherIcon() {
@@ -57,11 +57,11 @@ public class OWMWeather {
 
     public void setWeatherTemp(Double currentWeather) {
         TextView txt_weather = ((Activity)context).findViewById(R.id.txt_weather);
-        txt_weather.setText(String.format("%.0f", currentWeather) + " °C");
+        txt_weather.setText(String.format("%.0f", currentWeather) + " °F");
     }
 
     public void getWeather() {
-        helper.getCurrentWeatherByCityName("Cyberjaya", new OpenWeatherMapHelper.CurrentWeatherCallback() {
+        helper.getCurrentWeatherByZipCode("78130", new OpenWeatherMapHelper.CurrentWeatherCallback() {
             @Override
             public void onSuccess(CurrentWeather currentWeather) {
                 setWeatherIcon(currentWeather.getWeatherArray().get(0).getIcon());
